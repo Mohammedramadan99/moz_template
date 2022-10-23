@@ -1,0 +1,57 @@
+@import './globals.scss';
+@import './vars';
+.nav{
+  position: sticky;
+  top: 0;
+  background: #fff;
+  height: rem(105);
+  padding: $container__padding__lg;
+  @include flex($justify:space-between);
+  box-shadow:0 0 20px rgb(0 0 0 / 5%);
+  z-index: 1000;
+  @media (max-width: 768px) {
+    padding: $container__padding__sm;
+  }
+  &__logo{
+    
+  }
+  &__links {
+    @include flex();
+    &__link{
+      text-transform: capitalize;
+      cursor: pointer;
+      margin-right: rem(20);
+      font-weight: 500;
+      .link_wrap {
+        padding-bottom: rem(5);
+          position: relative;
+          &::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: auto;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: $main__color;
+            z-index: -1;
+            opacity: 0;
+            transition: .3s all ease;
+          }
+        }
+        &:hover {
+            .link_wrap {
+              // good hover
+              &::before {
+                width: 100%;
+                left: 0;
+                right: auto;
+                opacity: 1;
+              }
+            }
+        }
+    }
+  }
+  
+}

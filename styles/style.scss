@@ -1,0 +1,164 @@
+@import './vars';
+@import './globals.scss';
+@import './nav.scss';
+@import './banner.scss';
+@import './textblockOne.scss'; // 
+@import './TextBlockTwo.scss'; // 
+@import './features.scss';
+@import './portfolio.scss'; // 
+@import './whyus.scss'; // 
+@import './textblockThree.scss'; 
+@import './footer.scss';
+
+// ############## classes ##############
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: poppins;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+input { 
+  &:focus {
+    outline: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+.bg-dark{
+  background-color: $dark__color;
+  color: #fff;
+}
+// container
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+// Small
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+// Medium
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+// large
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.img--container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.main-color{
+  color: $main__color;
+}
+.color_dark {
+  color: #888;
+}
+.main__btn {
+  position: relative;
+  font-size: rem(20);
+  text-transform: capitalize;
+  background: #161616;
+  width: fit-content;
+  padding: rem(10) rem(30);
+  cursor: pointer;
+
+  &:hover {
+    &::before {
+      transform: scale(1);
+      opacity: 0;
+      transition: all .5s ease-in-out;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    margin: -50px 0 0 -50px;
+    transform: scale(0);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .5);
+  }
+}
+.logo{
+  display: flex;
+  align-items: center;
+  gap: rem(5);
+  text-transform: capitalize;
+  font-weight: 700;
+  color: $main__color;
+  cursor: none;
+  user-select: none;
+
+  &__one{
+    display: inline-block;
+    background-color: $main__color;
+    padding: rem(10);
+    border-radius: 50%;
+    @include flex();
+    color: #fff;
+    &.light{
+      color: #fff;
+    }
+  }
+  &__two{
+    position: relative;
+    font-weight: 500;
+    &.light{
+      color: #fff;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      bottom: rem(-2);
+      left: -12px;
+      width: 120%;
+      height: rem(1);
+      background-color: $main__color;
+      border-radius: rem(100);
+
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: rem(-2);
+      left: -12px;
+      width: 120%;
+      height: rem(1);
+      background-color: $main__color;
+      border-radius: rem(100);
+
+    }
+
+  }
+}

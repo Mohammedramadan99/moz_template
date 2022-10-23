@@ -1,0 +1,51 @@
+@import './globals.scss';
+@import './vars';
+
+.features{
+    padding: $main__section__padding $container__padding__lg $main__section__padding;
+    @media (max-width: 768px) {
+      padding: $main__section__padding $container__padding__sm $main__section__padding !important;
+    &__header {
+      font-size: rem(40) !important;
+      margin-bottom: rem(50);
+        margin-right: rem(200) !important;
+    }
+    }
+    &__header{
+      font-size: rem(60);
+      font-weight: 700;
+      margin-bottom: rem(50);
+      margin-right: rem(700);
+    }
+    &__items{
+      @include grid($min:300);
+      &__item{
+        min-height: rem(200);
+        &__icon{
+          margin-bottom: 20px;
+          background-color: $dark__color;
+          width: fit-content;
+          color: #fff;
+          padding: 10px;
+          border-radius: 50%;
+          @include flex();
+          svg{
+            font-size: rem(40);
+          }
+        }
+        &__title{
+          font-size: rem(30);
+          font-weight: 300;
+          text-transform: capitalize;
+          padding-bottom: rem(20);
+        }
+        &__content{
+          &>div{
+            margin: rem(10) 0;
+            font-size: rem(18);
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+}

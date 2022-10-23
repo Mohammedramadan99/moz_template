@@ -1,0 +1,79 @@
+.footer{
+  padding-top: rem(50);
+  padding-left: rem(40);
+  padding-right: rem(40);
+  @include flex($dir: column);
+  &__top{
+    padding-bottom: rem(50);
+    width: 100%;
+    // @include grid($min:250);
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: rem(40);
+    &__partOne,&__partTwo,&__partThree,&__partFour{
+      flex: 1;
+      &__title{
+        font-size: rem(20);
+        text-transform: capitalize;
+        padding: rem(10) 0;
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 2px;
+      }
+      &__list{
+        li{
+          padding: rem(10) 0;
+          text-transform: capitalize;
+          font-size: rem(18)
+        }
+      }
+      &__txt{
+        width: 100%;
+        font-size: rem(20)
+      }
+    }
+    &__partFour{
+      flex: 2;
+      &__form{
+        padding: rem(10);
+        margin: rem(20) 0;
+        background-color: lighten($dark__color, 10%);
+        width: fit-content;
+        border-radius: rem(30);
+        display: flex;
+        input{
+          background-color: transparent;
+          border: 0;
+          color: #fff;
+          &:first-child{
+            padding-left: rem(10);
+            padding-right: rem(10);
+            font-size: rem(20);
+          }
+          &:last-child{
+            background-color: $main__color;
+            padding: rem(10) rem(20);
+            border-radius: rem(30);
+            text-transform: capitalize;
+            font-weight: 600;
+            font-size: rem(17);
+            cursor: pointer;
+            transition: $speed_duration;
+            &:hover{
+              background-color: darken($main__color, 10%)
+            }
+          }
+        }
+      }
+      &__note{
+        color: #777;
+      }
+    }
+  }
+  &__bottom{
+    @include flex();
+    padding: rem(20) 0;
+    width: 100%;
+    border-top: 1px solid #333;
+  }
+}

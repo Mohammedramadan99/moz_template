@@ -1,0 +1,97 @@
+@import './vars';
+.banner{
+  height: calc(100vh - 205px);
+  position: relative;
+  padding: 0 $container__padding__lg;
+  // Small
+  @media (max-width: 768px) {
+    padding: 0 $container__padding__sm !important;
+    .banner{
+      &__wrapper {
+        &__inner{
+          left: 0;
+          width: 100%;
+          &__content {
+            &__title {
+                font-size: rem(50);
+                font-weight: 500;
+              }
+            
+              &__text {
+                font-size: rem(20);
+                font-weight: 300;
+              }
+            
+              &__btn {
+                font-size: rem(18);
+                margin-left: 0;
+              }
+          }
+        } 
+      }
+    }
+  }
+  &__wrapper{
+    position: relative;
+    // padding: 0 rem(100);
+    width: 100%;
+    height: 100%;
+    &__img{
+      width: 100%;
+      height: $banner__main__h;
+      &__overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(rgb(255, 189, 211),.1);
+        z-index: 1;
+      }
+    }
+    &__inner{
+      position: absolute;
+      top:0;
+      left: 20%;
+      // transform: translateY(-50%);
+      width: 50%;
+      height: $banner__main__h;
+      padding: rem(20);
+      // border-bottom-left-radius: rem(700);
+      // border-bottom-right-radius: rem(700);
+      overflow: hidden;
+      &::before {
+        content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          // transform: translateX(-50%);
+          mix-blend-mode: multiply;
+          background-color: $main__color;
+          // border-bottom-left-radius: rem(700);
+          // border-bottom-right-radius: rem(700);
+        }
+      &__content{
+      // @include flex($dir:column);
+        margin-top: rem(100);
+        position: absolute;
+        color: #fff;
+        z-index: 100;
+        &__title{
+          margin-bottom: rem(20);
+          font-size: rem(80);
+          text-transform: capitalize;
+          font-weight: bold;
+        }
+        &__text{
+          font-size: rem(25);
+        }
+        &__btn{
+          margin: 50px ;
+        }
+      }
+    }
+  }
+}

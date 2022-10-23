@@ -1,0 +1,79 @@
+@import './vars';
+.textblock__one{
+      // max-width: 100%;
+      padding: $main__section__padding $container__padding__lg $main__section__padding; 
+      // @include grid($min:500);
+      display: flex !important;
+      flex-wrap: wrap !important;
+      @media (max-width: 768px) {
+            padding: $main__section__padding $container__padding__sm 0;
+            flex-direction: column;
+            &__img{
+                  
+                  position: relative;
+                  order: 2;
+                  margin-bottom: rem(100) !important;
+                  // display: flex;
+                  &::before{
+                        width: 80% !important;
+                        height: 90% !important;
+                        top: rem(0) !important;
+                        left: 0 !important;
+                  }
+                  img{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        min-width: 90% !important;
+                        min-height: 90% !important;
+                  }
+            }
+            &__content{
+                  
+                  order: 1;
+                  &__smallTxt {
+                        font-size: rem(20) !important;
+                        font-weight: 300;
+                  }
+                  
+                  &__longTxt {
+                        margin-top: rem(20) !important;
+                        font-size: rem(35) !important;
+                  }
+            }
+      }
+      &__img{
+            position: relative;
+            flex: 1;
+            width: 100%;
+            height: rem(500);
+            // &::before{
+            //       content: '';
+            //       position: absolute;
+            //       width: 60%;
+            //       height: 100%;
+            //       top: 30px;
+            //       left: 60px;
+            //       background: rgb(255, 75, 75);
+                  
+            // }
+      }
+      &__content{
+            flex: 1;
+            color: #fff;
+            width: 100%;
+            &__smallTxt{
+                  font-size: rem(30);
+                  font-weight: 300;
+            }
+            &__longTxt{
+                  margin-top: rem(30);
+                  font-size: rem(55);
+                  padding-right: rem(40);
+                  line-height: 1.8;
+                  span{
+                        font-weight: 300;
+                  }
+            }
+      }
+}
