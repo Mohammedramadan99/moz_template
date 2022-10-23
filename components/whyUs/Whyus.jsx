@@ -19,7 +19,7 @@ function Whyus() {
       </div>
       <div className="whyus__left">
         <div className="whyus__left__img">
-          <Image src={imgOne} layout="fill" objectFit='cover' />
+          <Image src={imgOne} layout="fill" objectFit='cover' alt='img' />
         </div>
       </div>
     </div>
