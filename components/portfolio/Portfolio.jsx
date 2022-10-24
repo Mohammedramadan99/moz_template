@@ -23,6 +23,7 @@ function Portfolio()
       title: 'ecommerse',
       intro: 'a great ecommerce website who has many features like different products , product details , add to cart , login & register , payment and so on',
       img: portfolioImg,
+      aos:"fade-left",
     },
     {
       id: Math.floor(Math.random() * 1000 + 1),
@@ -30,6 +31,7 @@ function Portfolio()
       title: 'socialmedia',
       intro: 'a great ecommerce website who has many features like different products , product details , add to cart , login & register , payment and so on',
       img: portfolioImg,
+      aos:"fade-up",
     },
     {
       id: Math.floor(Math.random() * 1000 + 1),
@@ -37,6 +39,7 @@ function Portfolio()
       title: 'portfolio',
       intro: 'a great ecommerce website who has many features like different products , product details , add to cart , login & register , payment and so on',
       img: portfolioImg,
+      aos:"fade-down",
     },
     {
       id: Math.floor(Math.random() * 1000 + 1),
@@ -44,19 +47,22 @@ function Portfolio()
       title: 'game',
       intro: 'a great ecommerce website who has many features like different products , product details , add to cart , login & register , payment and so on',
       img: portfolioImg,
+      aos:"fade-right",
     },
   ])
   return (
     <div className='portfolio bg-dark'>
       <div className="container">
-        <div className="portfolio__header">
+        <div className="portfolio__header" data-aos="zoom-in">
           Lets check <span className='main-color'> my portfolio </span>
         </div>
-        <div className="portfolio__workItems">
+        <div className="portfolio__workItems" data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+          data-aos-offset="0">
           <Swiper
             modules={[Virtual,Navigation, Pagination]}
-            FreeMode={true}
-            grapCursor={true}
+            grabCursor={true}
             pagination={{ clickable: true }}
             virtual
             breakpoints={{
@@ -83,7 +89,7 @@ function Portfolio()
             }}
           >
             {portfolioData.map((slideContent, index) => (
-              <SwiperSlide  key={slideContent} virtualIndex={index}>
+              <SwiperSlide key={slideContent} virtualIndex={index}>
                   <div className="portfolio__workItems__item" >
                       <div className="portfolio__workItems__item__img">
                         <Image src={slideContent.img} layout='fill' objectFit='cover' alt='portfolioImg' />

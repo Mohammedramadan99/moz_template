@@ -1,17 +1,17 @@
 import Image from 'next/image'
-import imgOne from  '../../public/imgs/travel/img_9.jpg'
+import imgOne from  '../../public/imgs/travel/team_4.jpg'
 
 function Whyus() {
   return (
     <div className='whyus'>
       <div className="whyus__right">
-        <div className="whyus__right__header">
+        <div className="whyus__right__header" data-aos="zoom-out">
           why choose <span className='main-color'> us </span> ?
         </div>
-        <div className="whyus__right__txt">
+        <div className="whyus__right__txt" data-aos="zoom-in">
           we will help you to achive your goals and having good time togeather 
         </div>
-        <ul className="whyus__right__list">
+        <ul className="whyus__right__list" data-aos="fade-left">
           <li> professional website with attractive colors </li>
           <li> clean code </li>
           <li> attractive colors </li>

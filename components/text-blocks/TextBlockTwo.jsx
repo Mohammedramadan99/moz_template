@@ -4,7 +4,7 @@ function TextBlockTwo() {
     <div className='textblock__two'>
       
         <div className="textblock__two__leftSide">          
-          <div className="textblock__two__leftSide__textWrapper">
+        <div className="textblock__two__leftSide__textWrapper" data-aos="fade-left">
             <h1 className="textblock__two__leftSide__textWrapper__boldTitle">
               Provide best solution by our expert.
             </h1>
@@ -13,7 +13,7 @@ function TextBlockTwo() {
           </div>
           </div>
         <div className="textblock__two__rightSide">
-          <div className="textblock__two__rightSide__textWrapper">
+        <div className="textblock__two__rightSide__textWrapper" data-aos="fade-left">
               <h1 className="textblock__two__rightSide__textWrapper__boldTitle">
                 Provide best solution by our expert.
               </h1>

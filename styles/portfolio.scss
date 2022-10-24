@@ -1,5 +1,6 @@
 .portfolio{
   padding: $main__section__padding 0 $main__section__padding;
+  overflow: hidden;
   @media (max-width: 992px) {
     .portfolio {
       &__workItems {

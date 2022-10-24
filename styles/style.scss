@@ -1,7 +1,7 @@
 @import './vars';
 @import './globals.scss';
 @import './nav.scss';
-@import './banner.scss';
+@import './banner.scss'; 
 @import './textblockOne.scss'; // 
 @import './TextBlockTwo.scss'; // 
 @import './features.scss';
@@ -22,6 +22,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 input { 

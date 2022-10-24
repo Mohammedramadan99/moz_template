@@ -83,7 +83,7 @@
     position: relative;
     padding-left: $container__padding__lg;
     padding-right: $container__padding__lg;
-    background: url('../public/imgs/travel/img_6.jpg') no-repeat center;
+    background: url('../public/imgs/travel/team_5.webp') no-repeat center;
     background-size: cover;
     height: 100%;
     color: #fff;
@@ -104,7 +104,7 @@
   &__rightSide{
     position: relative;
     padding-right: $container__padding__lg;
-    background: url('../public/imgs/travel/img_6.jpg') no-repeat center;
+    background: url('../public/imgs/travel/team_1.webp') no-repeat center;
     background-size: cover;
     height: 100%;
     @include flex($dir: column);
